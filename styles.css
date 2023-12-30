@@ -1,1 +1,37 @@
 
+body {
+  margin: 0;
+  font-family: '𝗦𝗮𝗻𝗱', sans-serif;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin-top: -20px; /* Adjust as needed */
+}
+
+.mySlides {
+  display: none;
+}
+
+.nav-bar {
+  background-color: black;
+  overflow: hidden;
+}
+
+.nav-bar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Add more styles as needed */
