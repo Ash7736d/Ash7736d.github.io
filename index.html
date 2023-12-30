@@ -10,10 +10,36 @@
       margin: 0;
       padding: 0;
     }
+
+    .nav-bar {
+      background-color: black;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-bar img {
+      margin-right: 10px; /* Adjust spacing as needed */
+    }
+
+    .menu-text {
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-bar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <!-- Your existing code goes here -->
+  <!-- Your existing and new code goes here -->
 
   <div class="slideshow-container">
     <div class="mySlides fade">
@@ -23,6 +49,7 @@
     <!-- Add more slides as needed -->
 
     <div class="nav-bar">
+      <img src="icon.png" alt="Icon" width="20" height="20"> <!-- Adjust width and height as needed -->
       <span class="menu-text">Menu</span>
       <a href="#bundles">Bundles</a>
       <a href="#contact">Contact</a>
@@ -32,7 +59,7 @@
 
   <script src="script.js"></script>
 
-  <!-- End of your existing code -->
+  <!-- End of your code -->
 
 </body>
 </html>
