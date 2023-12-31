@@ -4,16 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>3D Slide UI</title>
+    <title>Black Themed UI</title>
 </head>
 <body>
-    <div class="container">
-        <div class="slide-ui">
-            <div class="button3d" onclick="navigate('page1')">Element 1</div>
-            <div class="button3d" onclick="navigate('page2')">Element 2</div>
-            <div class="button3d" onclick="navigate('page3')">Element 3</div>
+    <header class="header">
+        <div class="logo">Your Logo</div>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <!-- Page 1 -->
+        <div id="home" class="page">
+            <h1>Welcome to Your Website</h1>
+            <div class="image-container">
+                <img src="image1.jpg" alt="Image 1">
+                <button class="btn3d" onclick="navigate('page1')">Button 1</button>
+                <p>Description for Image 1</p>
+            </div>
         </div>
-    </div>
+
+        <!-- Page 2 -->
+        <div id="about" class="page">
+            <h2>About Us</h2>
+            <div class="image-container">
+                <img src="image2.jpg" alt="Image 2">
+                <button class="btn3d" onclick="navigate('page2')">Button 2</button>
+                <p>Description for Image 2</p>
+            </div>
+        </div>
+
+        <!-- More pages can be added similarly -->
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Your Company</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
