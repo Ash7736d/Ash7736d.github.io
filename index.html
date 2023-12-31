@@ -4,104 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Your 3D UI</title>
-    <style>
-        /* Your existing styles here */
-
-        /* Add your spinner CSS here */
-        .loadingspinner {
-            --square: 26px;
-            --offset: 30px;
-            --duration: 2.4s;
-            --delay: 0.2s;
-            --timing-function: ease-in-out;
-            --in-duration: 0.4s;
-            --in-delay: 0.1s;
-            --in-timing-function: ease-out;
-            width: calc(3 * var(--offset) + var(--square));
-            height: calc(2 * var(--offset) + var(--square));
-            padding: 0px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 10px;
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .loadingspinner div {
-            display: inline-block;
-            background: darkorange;
-            border-radius: 2px;
-            width: var(--square);
-            height: var(--square);
-            position: absolute;
-            padding: 0px;
-            margin: 0px;
-            font-size: 6pt;
-            color: black;
-        }
-
-        .loadingspinner #square1 {
-            left: calc(0 * var(--offset));
-            top: calc(0 * var(--offset));
-            animation: square1 var(--duration) var(--delay) var(--timing-function) infinite,
-                       squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square2 {
-            left: calc(0 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square2 var(--duration) var(--delay) var(--timing-function) infinite,
-                       squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square3 {
-            left: calc(1 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square3 var(--duration) var(--delay) var(--timing-function) infinite,
-                       squarefadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square4 {
-            left: calc(2 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square4 var(--duration) var(--delay) var(--timing-function) infinite,
-                       squarefadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square5 {
-            left: calc(3 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square5 var(--duration) var(--delay) var(--timing-function) infinite,
-                       squarefadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        @keyframes /* ... your existing keyframes here ... */
-
-        /* Add your new keyframes here */
-
-    </style>
+    <title>3D Slide UI</title>
 </head>
 <body>
-    <!-- Your existing HTML content here -->
-
-    <!-- Add your spinner HTML here -->
-    <div class="loadingspinner">
-        <div id="square1"></div>
-        <div id="square2"></div>
-        <div id="square3"></div>
-        <div id="square4"></div>
-        <div id="square5"></div>
+    <div class="container">
+        <div class="slide-ui">
+            <div class="button3d" onclick="navigate('page1')">Element 1</div>
+            <div class="button3d" onclick="navigate('page2')">Element 2</div>
+            <div class="button3d" onclick="navigate('page3')">Element 3</div>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-<!-- Existing HTML code -->
-
-<!-- New HTML code -->
-<button
-  style="box-shadow: inset 0 2px 4px 0 rgb(2 6 23 / 0.3), inset 0 -2px 4px 0 rgb(203 213 225);"
-  class="inline-flex cursor-pointer items-center gap-1 rounded border border-slate-300 bg-gradient-to-b from-slate-50 to-slate-200 px-4 py-2 font-semibold hover:opacity-90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-300 focus-visible:ring-offset-2 active:opacity-100"
->
-  Proceed
-</button>
