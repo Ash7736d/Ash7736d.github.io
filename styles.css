@@ -1,40 +1,85 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #000;
+    color: #fff;
 }
 
-.container {
+.header {
+    background-color: #222;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
 }
 
-.slide-ui {
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    gap: 20px;
 }
 
-.button3d {
+.main-menu li {
+    margin-right: 20px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.content {
+    padding: 20px;
+}
+
+.page {
+    margin-bottom: 50px;
+}
+
+.image-container {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn3d {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #3498db;
-    color: white;
-    padding: 15px 20px;
+    color: #fff;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform-style: preserve-3d;
     transition: transform 0.3s ease-in-out;
 }
 
-.button3d:hover {
-    transform: translateZ(10px);
+.btn3d:hover {
+    transform: translateY(-5px);
 }
 
-.button3d:active {
-    transform: translateZ(-10px);
+.footer {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
