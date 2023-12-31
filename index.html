@@ -3,63 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Website Title</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Your Website</title>
   <style>
     body {
       margin: 0;
       padding: 0;
+      background-color: white;
+      font-family: 'Arial', sans-serif;
     }
 
-    .nav-bar {
+    .menu-bar {
       background-color: black;
-      overflow: hidden;
+      padding: 15px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
       display: flex;
+      justify-content: flex-end;
       align-items: center;
     }
 
-    .nav-bar img {
-      margin-right: 10px; /* Adjust spacing as needed */
+    .menu-icon {
+      cursor: pointer;
+      color: white;
+      font-size: 24px;
     }
 
-    .menu-text {
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .buy-button {
+      padding: 15px 30px;
       font-size: 18px;
-      font-weight: bold;
+      background-color: black;
       color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
     }
 
-    .nav-bar a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
+    .buy-button:hover {
+      background-color: #333;
     }
   </style>
 </head>
 <body>
-  <!-- Your existing and new code goes here -->
 
-  <div class="slideshow-container">
-    <div class="mySlides fade">
-      <img src="https://cdn.discordapp.com/attachments/1182958505183948800/1190731750863802468/20231230_123510_0000.png?ex=65a2de5c&is=6590695c&hm=0dc0208157c21010cfe93c2d01c7aab0642b21e3743a92b753ddd392b8bdd518&" alt="Slide 1">
-    </div>
+<!-- Menu Bar -->
+<div class="menu-bar">
+  <div class="menu-icon">&#9776;</div>
+</div>
 
-    <!-- Add more slides as needed -->
-
-    <div class="nav-bar">
-      <img src="icon.png" alt="Icon" width="20" height="20"> <!-- Adjust width and height as needed -->
-      <span class="menu-text">Menu</span>
-      <a href="#bundles">Bundles</a>
-      <a href="#contact">Contact</a>
-      <a href="#updates">Updates</a>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-
-  <!-- End of your code -->
+<!-- Content -->
+<div class="content">
+  <!-- Buy Button -->
+  <button class="buy-button">Buy</button>
+</div>
 
 </body>
 </html>
