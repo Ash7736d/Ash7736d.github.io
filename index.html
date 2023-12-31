@@ -7,39 +7,42 @@
     <title>Your 3D UI</title>
     <style>
         /* Add your spinner CSS here */
-        .spinner {
+        .loadingspinner {
+            position: relative;
             width: 56px;
             height: 56px;
-            display: grid;
-            border: 4.5px solid #0000;
+        }
+
+        .loadingspinner div {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
             border-radius: 50%;
-            border-color: #dbdcef #0000;
-            animation: spinner-e04l1k 1s infinite linear;
+            animation: loading-spinner 1.2s linear infinite;
         }
 
-        .spinner::before,
-        .spinner::after {
-            content: "";
-            grid-area: 1/1;
-            margin: 2.2px;
-            border: inherit;
-            border-radius: 50%;
-        }
+        #square1 { transform: rotate(0deg) translateX(112px); }
+        #square2 { transform: rotate(72deg) translateX(112px); }
+        #square3 { transform: rotate(144deg) translateX(112px); }
+        #square4 { transform: rotate(216deg) translateX(112px); }
+        #square5 { transform: rotate(288deg) translateX(112px); }
 
-        .spinner::before {
-            border-color: #474bff #0000;
-            animation: inherit;
-            animation-duration: 0.5s;
-            animation-direction: reverse;
-        }
-
-        .spinner::after {
-            margin: 8.9px;
-        }
-
-        @keyframes spinner-e04l1k {
+        @keyframes loading-spinner {
+            0%, 20% {
+                transform: rotate(0deg);
+            }
+            25%, 45% {
+                transform: rotate(180deg);
+            }
+            50%, 70% {
+                transform: rotate(180deg);
+            }
+            75%, 95% {
+                transform: rotate(360deg);
+            }
             100% {
-                transform: rotate(1turn);
+                transform: rotate(360deg);
             }
         }
     </style>
@@ -52,7 +55,13 @@
             <button class="cta-button">Learn More</button>
         </div>
         <!-- Add your spinner HTML here -->
-        <div class="spinner"></div>
+        <div class="loadingspinner">
+            <div id="square1"></div>
+            <div id="square2"></div>
+            <div id="square3"></div>
+            <div id="square4"></div>
+            <div id="square5"></div>
+        </div>
     </div>
 </body>
 </html>
