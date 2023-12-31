@@ -1,6 +1,5 @@
 // Your 3D logic using Three.js goes here
 
-// Example: Creating a simple cube
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer();
@@ -8,18 +7,19 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('scene-container').appendChild(renderer.domElement);
 
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+// Create a plane with a black and white material
+const geometry = new THREE.PlaneGeometry(10, 10, 1);
+const material = new THREE.MeshBasicMaterial({ color: 0xffffff, side: THREE.DoubleSide }); // white color
+const plane = new THREE.Mesh(geometry, material);
+scene.add(plane);
+
+// Set background color to black
+renderer.setClearColor(0x000000);
 
 camera.position.z = 5;
 
 function animate() {
     requestAnimationFrame(animate);
-
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
 
     renderer.render(scene, camera);
 }
