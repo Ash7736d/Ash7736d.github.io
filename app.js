@@ -7,9 +7,9 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('scene-container').appendChild(renderer.domElement);
 
-// Create a plane with a black and white material
+// Create a plane with a black material
 const geometry = new THREE.PlaneGeometry(10, 10, 1);
-const material = new THREE.MeshBasicMaterial({ color: 0xffffff, side: THREE.DoubleSide }); // white color
+const material = new THREE.MeshBasicMaterial({ color: 0x000000, side: THREE.DoubleSide });
 const plane = new THREE.Mesh(geometry, material);
 scene.add(plane);
 
