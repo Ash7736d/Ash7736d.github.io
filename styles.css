@@ -1,36 +1,10 @@
 body {
     margin: 0;
-    padding: 0;
     overflow: hidden;
-    background-image: url('https://cdn.discordapp.com/attachments/1183234746180964493/1190842753643462756/e1e5fd6e92f53bd1202c53413e6d8a1d.jpg?ex=65a345bd&is=6590d0bd&hm=1c1c61827baeed8096e2c360d5a1c236ea92920cdbd210ee71c5419a42e644c4');
-    background-size: cover;
-    height: 100vh;
 }
 
-.sliding-menu {
-    position: fixed;
+#scene-container {
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.highlight-text {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.next-page-btn {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
 }
