@@ -6,62 +6,92 @@
     <link rel="stylesheet" href="styles.css">
     <title>Your 3D UI</title>
     <style>
+        /* Your existing styles here */
+
         /* Add your spinner CSS here */
         .loadingspinner {
+            --square: 26px;
+            --offset: 30px;
+            --duration: 2.4s;
+            --delay: 0.2s;
+            --timing-function: ease-in-out;
+            --in-duration: 0.4s;
+            --in-delay: 0.1s;
+            --in-timing-function: ease-out;
+            width: calc(3 * var(--offset) + var(--square));
+            height: calc(2 * var(--offset) + var(--square));
+            padding: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            margin-bottom: 30px;
             position: relative;
-            width: 56px;
-            height: 56px;
         }
 
         .loadingspinner div {
+            display: inline-block;
+            background: darkorange;
+            border-radius: 2px;
+            width: var(--square);
+            height: var(--square);
             position: absolute;
-            width: 8px;
-            height: 8px;
-            background-color: #fff;
-            border-radius: 50%;
-            animation: loading-spinner 1.2s linear infinite;
+            padding: 0px;
+            margin: 0px;
+            font-size: 6pt;
+            color: black;
         }
 
-        #square1 { transform: rotate(0deg) translateX(112px); }
-        #square2 { transform: rotate(72deg) translateX(112px); }
-        #square3 { transform: rotate(144deg) translateX(112px); }
-        #square4 { transform: rotate(216deg) translateX(112px); }
-        #square5 { transform: rotate(288deg) translateX(112px); }
-
-        @keyframes loading-spinner {
-            0%, 20% {
-                transform: rotate(0deg);
-            }
-            25%, 45% {
-                transform: rotate(180deg);
-            }
-            50%, 70% {
-                transform: rotate(180deg);
-            }
-            75%, 95% {
-                transform: rotate(360deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+        .loadingspinner #square1 {
+            left: calc(0 * var(--offset));
+            top: calc(0 * var(--offset));
+            animation: square1 var(--duration) var(--delay) var(--timing-function) infinite,
+                       squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
         }
+
+        .loadingspinner #square2 {
+            left: calc(0 * var(--offset));
+            top: calc(1 * var(--offset));
+            animation: square2 var(--duration) var(--delay) var(--timing-function) infinite,
+                       squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+        }
+
+        .loadingspinner #square3 {
+            left: calc(1 * var(--offset));
+            top: calc(1 * var(--offset));
+            animation: square3 var(--duration) var(--delay) var(--timing-function) infinite,
+                       squarefadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
+        }
+
+        .loadingspinner #square4 {
+            left: calc(2 * var(--offset));
+            top: calc(1 * var(--offset));
+            animation: square4 var(--duration) var(--delay) var(--timing-function) infinite,
+                       squarefadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
+        }
+
+        .loadingspinner #square5 {
+            left: calc(3 * var(--offset));
+            top: calc(1 * var(--offset));
+            animation: square5 var(--duration) var(--delay) var(--timing-function) infinite,
+                       squarefadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
+        }
+
+        @keyframes /* ... your existing keyframes here ... */
+
+        /* Add your new keyframes here */
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <h1>Welcome to Your Website</h1>
-            <p>This is a sample 3D UI. Customize it as per your needs.</p>
-            <button class="cta-button">Learn More</button>
-        </div>
-        <!-- Add your spinner HTML here -->
-        <div class="loadingspinner">
-            <div id="square1"></div>
-            <div id="square2"></div>
-            <div id="square3"></div>
-            <div id="square4"></div>
-            <div id="square5"></div>
-        </div>
+    <!-- Your existing HTML content here -->
+
+    <!-- Add your spinner HTML here -->
+    <div class="loadingspinner">
+        <div id="square1"></div>
+        <div id="square2"></div>
+        <div id="square3"></div>
+        <div id="square4"></div>
+        <div id="square5"></div>
     </div>
 </body>
 </html>
