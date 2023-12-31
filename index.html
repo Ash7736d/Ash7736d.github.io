@@ -5,6 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Your 3D UI</title>
+    <style>
+        /* Add your spinner CSS here */
+        .spinner {
+            width: 56px;
+            height: 56px;
+            display: grid;
+            border: 4.5px solid #0000;
+            border-radius: 50%;
+            border-color: #dbdcef #0000;
+            animation: spinner-e04l1k 1s infinite linear;
+        }
+
+        .spinner::before,
+        .spinner::after {
+            content: "";
+            grid-area: 1/1;
+            margin: 2.2px;
+            border: inherit;
+            border-radius: 50%;
+        }
+
+        .spinner::before {
+            border-color: #474bff #0000;
+            animation: inherit;
+            animation-duration: 0.5s;
+            animation-direction: reverse;
+        }
+
+        .spinner::after {
+            margin: 8.9px;
+        }
+
+        @keyframes spinner-e04l1k {
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -13,6 +51,8 @@
             <p>This is a sample 3D UI. Customize it as per your needs.</p>
             <button class="cta-button">Learn More</button>
         </div>
+        <!-- Add your spinner HTML here -->
+        <div class="spinner"></div>
     </div>
 </body>
 </html>
