@@ -1,4 +1,1 @@
-function navigate(page) {
-    alert("Navigating to " + page);
-    // Add your navigation logic here
-}
+//inspired by this awesome Tutorial https://www.codingnepalweb.com/2020/04/responsive-sidebar-menu-html-css.html
