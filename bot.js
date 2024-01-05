@@ -11,4 +11,4 @@ client.on('messageCreate', (message) => {
   // Handle commands and interact with the backend server
 });
 
-client.login('MTE4MTUyMTc0NDEyOTk3MDIyNg.G_xvXf.XPRaYiCqlfFHe8W51iN5bKhU2j7oqtklPm30W8');
+client.login('MMTE4MTUyMTc0NDEyOTk3MDIyNg.G3Al5N.0pi9JX5Spl77GG25jZEpxZyrpvKGsiuSJobIsQ');
