@@ -13,7 +13,7 @@ body{
     color: #fff;
     background-color: #e9ff99;
     background-image:
-        radial-gradient(at 9% 89%, hsla(215, 90%, 73%, 1) 0px, transparent 50%),
+        radial-gradient(at 9% 89%, hsl(216, 100%, 24%) 0px, transparent 50%),
         radial-gradient(at 72% 6%, hsla(331, 74%, 64%, 1) 0px, transparent 50%),
         radial-gradient(at 24% 19%, hsla(14, 90%, 74%, 1) 0px, transparent 50%),
         radial-gradient(at 65% 6%, hsla(6, 79%, 76%, 1) 0px, transparent 50%),
